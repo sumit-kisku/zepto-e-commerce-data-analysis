@@ -44,3 +44,17 @@ FROM zepto
 GROUP BY name
 HAVING COUNT(sku_id) > 1
 ORDER BY name DESC;
+
+--data cleaning
+
+--products with price=0
+SELECT * FROM zepto
+WHERE mrp = 0 OR discountedsellingprice = 0;
+
+DELETE FROM zepto
+WHERE mrp = 0;
+
+--convert paise to rupees
+UPDATE zepto
+SET mrp = mrp/100,
+discountedsellingprice = discountedsellingprice/100;
