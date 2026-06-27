@@ -28,3 +28,12 @@ The core analysis is built around the `zepto` table, which captures real-time e-
 * **Granularity Check:** Identified duplicate item listings by grouping product names and filtering via `HAVING COUNT(sku_id) > 1`.
 
 ### 2. Data Cleaning & Transformation
+* **Zero-Price Anomaly Handling:** Identified and removed records where critical price points were recorded as zero to prevent skewed averages.
+* **Unit Standardization**: Standardized monetary values by converting raw data from paise to Rupees.
+
+### 3. Business Analytics & Insights (Key Queries Answered)
+The analysis answers crucial retail questions divided into categories:
+
+* **Pricing & Value Optimizations:** Evaluated top-value deals based on highest discount percentages and optimized cost-per-gram ratios for bulk packages (`weightingms > 100`).
+* **Inventory & Revenue Management:** Calculated the estimated revenue potential per category by aggregating `availablequantity * discountedsellingprice`.
+* **Stock & Segment Profiling:** Used conditional `CASE WHEN` logic to group inventory into distinct weight segments (`low`, `medium`, `bulk`) to better understand logistical distributions.
