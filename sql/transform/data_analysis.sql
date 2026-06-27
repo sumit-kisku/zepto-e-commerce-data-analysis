@@ -1,5 +1,7 @@
+--delete any table named 'zepto' if it already exists
 DROP TABLE IF EXISTS zepto;
 
+--create a table named 'zepto'
 CREATE TABLE zepto(
 	sku_id SERIAL PRIMARY KEY,
 	category VARCHAR(120),
