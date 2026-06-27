@@ -61,3 +61,7 @@ The analysis answers crucial retail questions divided into categories:
 * **Categorization & Market Ranking:**
   - Ranked the top 5 product categories delivering the highest average discounts to pinpoint promotional drivers.
   - Segmented the entire inventory into **Low**, **Medium**, and **Bulk** categories based on product weight for targeted marketing and shipping analysis.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
